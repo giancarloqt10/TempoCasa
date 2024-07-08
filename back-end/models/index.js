@@ -12,11 +12,14 @@ const Agente = require('./agente')(sequelize, DataTypes);
 const Annuncio = require('./annuncio')(sequelize, DataTypes);
 const Richiesta = require('./richiesta')(sequelize, DataTypes);
 
-module.exports = {
+const db = {
   sequelize,
+  Sequelize,
   Utente,
   Agenzia,
   Agente,
   Annuncio,
   Richiesta
 };
+
+module.exports = db;
